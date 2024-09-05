@@ -12,14 +12,27 @@
             <th>Nombre</th>
             <th>Capital</th>
             <th>Población</th>
-            <th></th>
+            <th>Info</th>
+        </thead>
             <tbody>
                 <tr *ngFor="let country of countries;let i=index ">
                     <td>{{i+1}}</td>
                     <td>{{country.flag}}</td>
+                    <td>
+                        <img [src]="country.flags.svg" alt="country.name.common">
+                    </td>
+                    <td>{{country.name.common}}</td>
+                    <td>{{country.capital}}</td>
+                    <td>{{country.population}}</td>
+                    <td>
+                        <a href="#">Mas info.</a>
+                    </td>
+
+
+                    <!-- una imagen de la bandera,el nombre,numero de habitantes -->
                 </tr>
             </tbody>
-          </tr>
-        </thead>
+         
+        
     </table>
 </ng-template>
