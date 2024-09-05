@@ -7,21 +7,25 @@ import { CountryPageComponent } from './pages/country-page/country-page.componen
 
 const routes:Routes=[
     {
-        path:'por-capital',
+        path:'by-capital',
         component:PorCapitalPageComponent
     },
     {
-        path:'por-pais',
+        path:'by-pais',
         component:PorPaisPageComponent
     },
     {
-        path:'por-region',
+        path:'by-region',
         component:PorRegionPageComponent
     }
     ,
     {
         path:'by/:id',
         component:CountryPageComponent
+    },
+    {
+        path:'**',
+        redirectTo:'by-capital'
     }
 ]
 

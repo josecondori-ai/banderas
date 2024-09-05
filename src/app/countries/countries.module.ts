@@ -5,6 +5,8 @@ import { PorPaisPageComponent } from './pages/por-pais-page/por-pais-page.compon
 import { PorRegionPageComponent } from './pages/por-region-page/por-region-page.component';
 import { CountryPageComponent } from './pages/country-page/country-page.component';
 import { CountriesRoutingModule } from './countries-routing.module';
+import { SharedModule } from "../shared/shared.module";
+import { CountryTableComponent } from './components/country-table/country-table.component';
 
 
 
@@ -13,11 +15,13 @@ import { CountriesRoutingModule } from './countries-routing.module';
     PorCapitalPageComponent,
     PorPaisPageComponent,
     PorRegionPageComponent,
-    CountryPageComponent
+    CountryPageComponent,
+    CountryTableComponent
   ],
   imports: [
     CommonModule,
-    CountriesRoutingModule
-  ]
+    CountriesRoutingModule,
+    SharedModule
+]
 })
 export class CountriesModule { }
